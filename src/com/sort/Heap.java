@@ -1,6 +1,7 @@
 package com.sort;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 /**
  * 默认大顶堆
@@ -56,11 +57,24 @@ public class Heap {
         arr[j] = temp;
     }
 
+    public void testPriorityQueue() {
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+        queue.offer(3);
+        queue.offer(1);
+        queue.offer(4);
+        queue.offer(2);
+        queue.offer(5);
+        for (Integer integer : queue) {
+            System.out.println(integer);
+        }
+    }
+
     public static void main(String[] args) {
         Heap heap = new Heap();
         int[] a = {3, 1, 4, 2, 5, 2};
 //        heap.heapInsert(a, a.length - 1);
         heap.heapSort(a);
         System.out.println(Arrays.toString(a));
+        heap.testPriorityQueue();
     }
 }
