@@ -1,4 +1,4 @@
-package com.solution;
+package com.solution.huawei;
 
 import java.util.ArrayList;
 import java.util.List;
